@@ -87,10 +87,7 @@
                 <td>Alamat Sekolah</td>
                 <td>: {{$mhs->alamat_sekolah}}</td>
             </tr>        
-            <tr>
-                <td>Kode Pos</td>
-                <td>: {{$mhs->kode_pos}}</td>
-            </tr>   
+ 
             <tr>
                 <td colspan="2">
                     <strong>Informasi Orang Tua</strong>
