@@ -16,7 +16,11 @@ class CreateMahasiswasTable extends Migration
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->id();
             $table->string("nomor_daftar",30)->unique();
+            $table->enum("verifikasi",['nonaktif','aktif']);
             $table->enum("kelamin",['L','P']);
+            $table->string("name");
+            $table->string("nama_akademi");
+            $table->enum("kewarganegaraan",['wni','wna']);
             $table->string("tinggi");
             $table->string("berat");
             $table->string("tempat_lahir");

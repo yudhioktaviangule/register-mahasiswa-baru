@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Web\MhsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get("register_mhs",[MhsController::class,'create'])->name("register_mhs");
+Route::post("register_mhs",[MhsController::class,'store'])->name("registrasi.store");
 
 Auth::routes();
 

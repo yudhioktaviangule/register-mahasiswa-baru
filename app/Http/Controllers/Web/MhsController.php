@@ -11,13 +11,13 @@ class MhsController extends Controller{
     private $request;
     public function __construct(Request $request) {
         $this->request = $request;
-        $this->middleware('auth');
     }
     public function index(){
         $request = $this->request;
     }
     public function create(){
         $request = $this->request;
+        return view("pages.register");
     }
     public function store(){
         $request = $this->request;
