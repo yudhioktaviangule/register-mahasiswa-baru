@@ -38,6 +38,11 @@ class PendaftarApi extends Controller{
     }
     public function edit($id){
         $request = $this->request;
+        $mhs = Mahasiswa::find($id);
+        if($mhs!=NULL):
+            return response()->view("pages.pendaftar.show",compact("mhs"));
+        endif;
+        return response()->json(['404'=>'NOT FOUND DATA MHS'],404);
     }
     public function update($id){
         $request = $this->request;

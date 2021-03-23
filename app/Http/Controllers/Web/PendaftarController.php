@@ -35,6 +35,8 @@ class PendaftarController extends Controller{
     }
     public function edit($id){
         $request = $this->request;
+        
+
     }
     public function update($id){
         $request = $this->request;
@@ -42,7 +44,6 @@ class PendaftarController extends Controller{
     public function destroy($id){
         $request = $this->request;
         $data = Mahasiswa::find($id);
-     
         if(!$data==NULL){
             $data->delete();
         }

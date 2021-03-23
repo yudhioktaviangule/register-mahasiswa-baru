@@ -111,6 +111,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div id="delete"></div>
 </form>
 
+
+@include("templates.modals")
 <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('assets/plugins/datatables/jquery.dataTables.js')}}"></script>
 <script src="{{asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
@@ -120,8 +122,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{asset('assets/dist/js/adminlte.min.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        <div id="auth"></div>
-                                    </form>
+    <div id="auth"></div>
+</form>
 <script>
   $(document).ready(()=>{
     setInterval(() => {
@@ -137,6 +139,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
         $("#form-delete").submit();
       }
       
+    }
+
+    window.callModals=(title="",param={},method="GET",url="",actionUrl="",saveEnable=true,modalType='md')=>{
+        $.ajax({
+          url:url,
+          type:method,
+          data:param,
+          dataType:"html",
+          beforeSend:(xhr)=>{
+            xhr.setRequestHeader("Auth",`Bearer {{Auth::user()->remember_token}}`)
+          }
+        }).done(response=>{
+          $("#formBody").html("");
+          $("#formBody").html(response);
+          $("#formTitle").html(title);
+          $("#mdDialog").attr("class",`modal-dialog modal-${modalType}`);
+          $("#modalForm").attr("action",actionUrl);
+          $("#modalForm").modal('toggle');
+        })
     }
   });
 </script>
