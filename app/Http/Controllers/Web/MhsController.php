@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Kontak;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\View;
@@ -63,10 +64,15 @@ class MhsController extends Controller{
         $mhs->save();
         $foto->move(public_path("mhs/foto"),"$ft");
         $ktp->move(public_path("mhs/ktp"),"$kt");
-        return view("pages.complete_register",compact("mhs"));
+
+        $admin = Kontak::first();
+
+        return view("pages.done_register",compact("mhs","admin"));
     }
     public function show($id){
         $request = $this->request;
+        $mhs = Mahasiswa::find($id);
+        return view("pages.print",compact('mhs'));
     }
     public function edit($id){
         $request = $this->request;

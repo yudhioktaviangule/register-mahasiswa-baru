@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 Route::get("register_mhs",[MhsController::class,'create'])->name("register_mhs");
 Route::post("register_mhs",[MhsController::class,'store'])->name("registrasi.store");
+Route::get("pendaftaran/{id}",[MhsController::class,'show'])->name("pendaftaran.show");
 
 Auth::routes();
 
