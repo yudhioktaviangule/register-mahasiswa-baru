@@ -22,6 +22,8 @@ class CreateMahasiswasTable extends Migration
             $table->string("name");
             $table->string("nik");
             $table->string("ibu_kandung");
+            $table->string("telepon_ayah",12);
+            $table->string("telepon_ibu",12);
             $table->string("ayah_kandung");
             $table->string("pekerjaan_ibu");
             $table->string("pekerjaan_ayah");
