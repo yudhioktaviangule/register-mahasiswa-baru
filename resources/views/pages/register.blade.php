@@ -90,22 +90,23 @@
                     </div>
                 </div>
             </div>
-                <div class="input-group mb-3">
+            <div class="input-group mb-3">
                 <input required type="number" class="form-control" placeholder="Tinggi Badan(cm)" maxlength="20"  min=100 name="tinggi">
                 <div class="input-group-append">
                     <div class="input-group-text">
                     <span class="fas fa-ruler"></span>
                     </div>
                 </div>
-                </div>
-                <div class="input-group mb-3">
+            </div>
+            <div class="input-group mb-3">
                 <input required type="number" class="form-control" placeholder="Berat Badan(KG)" maxlength="20" step=10 min=30 name="berat">
                 <div class="input-group-append">
                     <div class="input-group-text">
                     <span class="fas fa-ruler"></span>
                     </div>
                 </div>
-                </div>
+            </div>
+            
                 <div class="input-group mb-3">
                 <input required type="text" class="form-control" placeholder="Tempat Lahir" maxlength="20" name="tempat_lahir">
                 <div class="input-group-append">
@@ -115,7 +116,23 @@
                 </div>
                 </div>
                 <div class="input-group mb-3">
-                <input required type="date" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir">
+                    <input required type="date" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir">
+                </div>
+                <div class="input-group mb-3">
+                <input required type="text" class="form-control" placeholder="Sekolah Asal" maxlength="20"  min=100 name="sekolah_asal">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                    <span class="fas fa-school"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input required type="text" class="form-control" placeholder="Alamat Sekolah Asal" maxlength="20"  min=30 name="alamat_sekolah">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                    <span class="fas fa-school"></span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col">

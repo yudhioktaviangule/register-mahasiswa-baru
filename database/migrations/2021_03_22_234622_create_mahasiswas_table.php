@@ -25,6 +25,8 @@ class CreateMahasiswasTable extends Migration
             $table->string("ayah_kandung");
             $table->string("pekerjaan_ibu");
             $table->string("pekerjaan_ayah");
+            $table->string("sekolah_asal",60);
+            $table->string("alamat_sekolah",60);
             $table->string("nama_akademi");
             $table->enum("kewarganegaraan",['wni','wna']);
             $table->string("tinggi");

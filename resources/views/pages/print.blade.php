@@ -124,7 +124,7 @@
                     <br>
                     <br>
                     @if($ftx)
-                    <img src="{{$fturl}}" style="width:100%">
+                    <img src="{{$fturl}}" style="width:200px">
                     @endif
                 </td>
                 

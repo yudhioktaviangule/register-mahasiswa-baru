@@ -22,6 +22,8 @@ class Mahasiswa extends Model
         "nama_akademi",
         "ibu_kandung",
         "verifikasi",
+        "sekolah_asal",
+        "alamat_sekolah",
         "ayah_kandung",
         "pekerjaan_ibu",
         "pekerjaan_ayah",
