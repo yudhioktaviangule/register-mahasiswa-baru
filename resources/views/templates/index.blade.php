@@ -45,7 +45,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </nav>
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="{{route('home')}}" class="brand-link">
-      <img src="{{ asset('assets/dist/img/mylogo.jpg') }}" alt="{{Auth::user()->outlet_name}}" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="{{ asset('assets/dist/img/usr.jpg') }}" alt="{{Auth::user()->outlet_name}}" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">{{config('app.name')}}</span>
     </a>
     <div class="sidebar">
@@ -61,7 +61,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           
         </div>
       </div>
-      @include('template.sidebar')
+      @include('templates.sidebar')
     </div>
   </aside>
   <div class="content-wrapper">
@@ -110,7 +110,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div id="auth"></div>
   <div id="delete"></div>
 </form>
-<input type="hidden" id="upd" value="{{ route('ck.up') }}">
+
 <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('assets/plugins/datatables/jquery.dataTables.js')}}"></script>
 <script src="{{asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
