@@ -14,6 +14,7 @@ class PendaftarController extends Controller{
     }
     public function index(){
         $request = $this->request;
+        return view('pages.pendaftar.index');
     }
     public function create(){
         $request = $this->request;
