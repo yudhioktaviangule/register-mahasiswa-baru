@@ -41,5 +41,10 @@ class PendaftarController extends Controller{
     }
     public function destroy($id){
         $request = $this->request;
+        $data = Mahasiswa::find($id);
+        if(!$data==NULL){
+            $data->delete();
+        }
+        return redirect()->back();
     }
 }
