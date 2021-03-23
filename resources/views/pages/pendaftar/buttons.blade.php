@@ -5,5 +5,5 @@
     @else
         <a href="{{route('pendaftar.show',['pendaftar'=>$decode->id])}}" class="btn btn-success btn-sm"><i class="fas fa-check"></i></a>
     @endif
-    <a href="{{route('pendaftar.show',['pendaftar'=>$decode->id])}}" class="btn btn-success btn-sm"><i class="fas fa-print"></i> Cetak</a>
+    <a href="{{url('pendaftaran.show',['id'=>$decode->id])}}" class="btn btn-success btn-sm"><i class="fas fa-print"></i> Cetak</a>
 </div>
