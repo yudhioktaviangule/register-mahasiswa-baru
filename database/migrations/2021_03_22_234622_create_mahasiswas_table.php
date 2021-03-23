@@ -20,6 +20,7 @@ class CreateMahasiswasTable extends Migration
             $table->enum("agama",['islam','kristen','katolik','hindu','buddha']);
             $table->enum("kelamin",['L','P']);
             $table->string("name");
+            $table->string("email")->unique();
             $table->string("nik");
             $table->string("ibu_kandung");
             $table->string("telepon_ayah",12);

@@ -29,4 +29,33 @@
     </div>
 @endsection
 @section("js")
-
+    <script>
+        $(document).ready(()=>{
+            var _token = `Bearer {{Auth::user()->remember_token}}`;
+            //console.log(_token);
+            $('#pendaftar-table').DataTable({
+                serverSide:true,
+                processing:true,
+                columns:[
+                    {data:"nomor_daftar",name:"nomor_daftar"},
+                    {data:"name",name:"name"},
+                    {data:"telepon",name:"telepon"},
+                    {data:"email",name:"email"},
+                    {data:"sekolah_asal",name:"sekolah_asal"},
+                    {data:"alamat_sekolah",name:"alamat_sekolah"},
+                    {data:"aksi",name:"aksi"},
+                ],
+                ajax:{
+                    url:`{{route('pendaftarapi.store')}}`,
+                    type:"POST",
+                    data:{
+                        _token:`{{csrf_token()}}`
+                    },
+                    beforeSend:(xhr)=>{
+                        xhr.setRequestHeader("Auth",_token);
+                    }
+                }   
+            })
+        });
+    </script>
+@endsection

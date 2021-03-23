@@ -40,6 +40,7 @@
                                     <p class="text-muted mb-4">Please, login to continue</p>
                                     <form action="{{route('login')}}" method="POST">
                                     	@csrf
+                                      <input type="hidden" name="remember" value="true">
                                       <div class="form-group mb-3">
                                             <input name='email' id="inputEmail" type="email" placeholder="Email" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
                                         </div>
