@@ -31,6 +31,9 @@ class Mahasiswa extends Model
         "foto",
         "ktp",
         "kewarganegaraan",
+        "email",
+        "telepon_ayah",
+        "telepon_ibu",
     ];
 
 }

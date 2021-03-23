@@ -46,6 +46,14 @@
                 </div>
             </div>
             <div class="input-group mb-3">
+                <input required type="email" class="form-control" placeholder="Email"  name="email">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                    <span class="fas fa-user"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
                 <input required type="text" class="form-control" placeholder="Nomor Identitas Kependudukan" maxlength="16" name="nik">
                 <div class="input-group-append">
                     <div class="input-group-text">
@@ -181,10 +189,26 @@
                 </div>
             </div>
             <div class="input-group mb-3">
+                <input required type="text" class="form-control" placeholder="No. Telepon Ibu " maxlength="12" name="telepon_ibu">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                    <span class="fas fa-telephone"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
                 <input required type="text" class="form-control" placeholder="Nama Ayah Kandung" maxlength="40" name="ayah_kandung">
                 <div class="input-group-append">
                     <div class="input-group-text">
                     <span class="fas fa-user"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input required type="text" class="form-control" placeholder="No. Telepon Ayah" maxlength="12" name="telepon_ayah">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                    <span class="fas fa-telephone"></span>
                     </div>
                 </div>
             </div>

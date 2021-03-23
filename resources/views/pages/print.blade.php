@@ -32,6 +32,10 @@
                 <td>: {{$mhs->name}}</td>
             </tr>
             <tr>
+                <td>E-Mail</td>
+                <td>: {{$mhs->email}}</td>
+            </tr>
+            <tr>
                 <td>Jenis Kelamin</td>
                 <td>: {{$mhs->kelamin=="L"? "Laki Laki" : "Perempuan"}}</td>
             </tr>
@@ -99,13 +103,21 @@
                 <td>: {{$mhs->ayah_kandung}}</td>
             </tr>                      
             <tr>
+                <td>Telepon Ayah</td>
+                <td>: {{$mhs->telepon_ayah}}</td>
+            </tr>                      
+            <tr>
                 <td>Pekerjaan Ayah</td>
                 <td>: {{$mhs->pekerjaan_ayah}}</td>
             </tr>                      
             <tr>
                 <td>Nama Ibu</td>
                 <td>: {{$mhs->ibu_kandung}}</td>
-            </tr>                      
+            </tr>  
+            <tr>
+                <td>Telepon Ibu</td>
+                <td>: {{$mhs->telepon_ibu}}</td>
+            </tr>                       
             <tr>
                 <td>Pekerjaan Ibu</td>
                 <td>: {{$mhs->pekerjaan_ibu}}</td>
