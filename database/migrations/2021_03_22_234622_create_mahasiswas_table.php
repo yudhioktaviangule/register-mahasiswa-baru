@@ -17,8 +17,14 @@ class CreateMahasiswasTable extends Migration
             $table->id();
             $table->string("nomor_daftar",30)->unique();
             $table->enum("verifikasi",['nonaktif','aktif']);
+            $table->enum("agama",['islam','kristen','katolik','hindu','buddha']);
             $table->enum("kelamin",['L','P']);
             $table->string("name");
+            $table->string("nik");
+            $table->string("ibu_kandung");
+            $table->string("ayah_kandung");
+            $table->string("pekerjaan_ibu");
+            $table->string("pekerjaan_ayah");
             $table->string("nama_akademi");
             $table->enum("kewarganegaraan",['wni','wna']);
             $table->string("tinggi");
@@ -28,8 +34,8 @@ class CreateMahasiswasTable extends Migration
             $table->longtext("alamat");
             $table->string("telepon",20);
             $table->string("kode_pos",5);
-            $table->longtext("ijazah");
-            $table->longtext("danum");
+            
+            $table->longtext("ktp");
             $table->longtext("foto");
             $table->integer("user_id")->default(0);
             $table->timestamps();
