@@ -75,6 +75,24 @@
             </tr>   
             <tr>
                 <td colspan="2">
+                    <strong>Informasi Sekolah Asal</strong>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>Nama Sekolah</td>
+                <td>: {{$mhs->sekolah_asal}}</td>
+            </tr>        
+            <tr>
+                <td>Alamat Sekolah</td>
+                <td>: {{$mhs->alamat_sekolah}}</td>
+            </tr>        
+            <tr>
+                <td>Kode Pos</td>
+                <td>: {{$mhs->kode_pos}}</td>
+            </tr>   
+            <tr>
+                <td colspan="2">
                     <strong>Informasi Orang Tua</strong>
                 </td>
                 
