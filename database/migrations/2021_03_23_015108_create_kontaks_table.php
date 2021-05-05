@@ -15,6 +15,7 @@ class CreateKontaksTable extends Migration
     {
         Schema::create('kontaks', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
             $table->string("whatsapp");
             $table->string("telegram");
             $table->string("email");

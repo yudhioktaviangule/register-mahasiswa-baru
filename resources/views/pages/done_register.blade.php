@@ -34,10 +34,15 @@
                 <i class="fas fa-print"></i>
                 Cetak
             </a>
-            <a href="https://api.whatsapp.com/send?phone={{$admin->whatsapp}}&text=Hi%0aNama Saya *{{$mhs->name}}*%0aNomor Pendaftaran : *{{$mhs->nomor_daftar}}* %0aSaya melakukan registrasi di web dan telah membayar dengan metode transfer%0asilahkan di cek di%0a%0a%0a{{url('/pendaftaran/'.$mhs->id)}}" target="_blank" class="btn btn-success">
+            @php 
+              
+            @endphp
+            @foreach($admin as $key => $adm)
+            <a href="https://api.whatsapp.com/send?phone={{$adm->whatsapp}}&text=Hi%0aNama Saya *{{$mhs->name}}*%0aNomor Pendaftaran : *{{$mhs->nomor_daftar}}* %0aSaya melakukan registrasi di web dan telah membayar dengan metode transfer%0asilahkan di cek di%0a%0a%0a{{url('/pendaftaran/'.$mhs->id)}}" target="_blank" class="btn btn-success">
                 <i class="fab fa-whatsapp"></i>
-                Hubungi Kami
+                HUBUNGI {{$adm->name}} 
             </a>
+            @endforeach
       </p>
 
     </div>

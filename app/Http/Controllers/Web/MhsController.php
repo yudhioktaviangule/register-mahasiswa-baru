@@ -65,7 +65,7 @@ class MhsController extends Controller{
         $foto->move(public_path("mhs/foto"),"$ft");
         $ktp->move(public_path("mhs/ktp"),"$kt");
 
-        $admin = Kontak::first();
+        $admin = Kontak::all();
 
         return view("pages.done_register",compact("mhs","admin"));
     }
