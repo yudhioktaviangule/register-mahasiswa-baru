@@ -24,8 +24,20 @@
     <div class="card-body register-card-body">
       
 
-      <form action="{{route('registrasi.store')}}" method="post" enctype="multipart/form-data">
+      <form id="pmb-form"  action="{{route('registrasi.store')}}" method="post" enctype="multipart/form-data">
         <div id="auth"></div>
+        @if($errors->any())
+        <div class="row">
+            <div onclick="reloadWin()" class="col-12 col-md-12 alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $err => $value)
+                        <li>{{ $value }}</li>
+                    @endforeach
+                </ul>
+
+            </div>
+        </div>
+        @endif
         <div class="row">
         <div class="col">
             <p class="login-box-msg">Info Mahasiswa</p>
@@ -107,7 +119,7 @@
                 </div>
             </div>
             <div class="input-group mb-3">
-                <input required type="number" class="form-control" placeholder="Berat Badan(KG)" maxlength="20" step=10 min=30 name="berat">
+                <input required type="number" class="form-control" placeholder="Berat Badan(KG)" maxlength="20" step=1 min=30 name="berat">
                 <div class="input-group-append">
                     <div class="input-group-text">
                     <span class="fas fa-ruler"></span>
@@ -174,6 +186,7 @@
             <div class='form-group'>
                 <label for='foto'>Soft-copy Foto 4x6</label>
                 <input required placeholder='Input File Foto' type='file' class='form-control' id='foto' name='foto'>
+                
             </div>
             <div class='form-group'>
                 <label for='ijazah'>Soft-copy Kartu Identitas</label>
@@ -239,8 +252,8 @@
             
           </div>
           <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          <div class="col-4 text-right" id="btn-container">
+            <button class="btn btn-primary btn-sm">Register</button>
           </div>
           <!-- /.col -->
         </div>
@@ -261,6 +274,25 @@
 <script src="{{asset('assets/dist/js/adminlte.min.js')}}"></script>
 <script>
   $(document).ready(()=>{
+    window.onChangeFile = (obj)=>{
+        const file = obj[0].files[0]
+        if(file.size>1999999){
+            return false
+        }else{
+            return true
+        }
+    }
+    $("#pmb-form").submit(()=>{
+        const cek = onChangeFile($("#foto"))
+        const lek = onChangeFile($("#ijazah"))
+        if(cek&&lek){
+            return true
+        }else{
+            alert("Ukuran Upload File Minimal 2 MB")
+            return false
+        }
+
+    })
     setInterval(() => {
         $("#auth").html(`@csrf`);
         $("#update").html(`<input type='hidden' name='_method' value='PUT'>`);
@@ -274,6 +306,9 @@
         $("#form-delete").submit();
       }
       
+    }
+    window.reloadWin=()=>{
+        location.reload()
     }
   });
 </script>

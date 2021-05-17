@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Pendaftarang;
 use App\Models\Kontak;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -43,9 +44,10 @@ class MhsController extends Controller{
         return $kode;
     }
 
-    public function store(){
-        $request = $this->request;
+    public function store(Pendaftarang $request){
+        
         $post = $request->input();
+        dd($post);
         unset($post['_token']);
         $post['foto'] = '-';
         $post['ktp'] = '-';
