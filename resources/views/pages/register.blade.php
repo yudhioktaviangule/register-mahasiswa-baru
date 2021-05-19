@@ -119,7 +119,7 @@
                 </div>
             </div>
             <div class="input-group mb-3">
-                <input required type="number" class="form-control" placeholder="Berat Badan(KG)" maxlength="20" step=1 min=30 name="berat">
+                <input required type="number" class="form-control" placeholder="Berat Badan(KG)" min=30 name="berat">
                 <div class="input-group-append">
                     <div class="input-group-text">
                     <span class="fas fa-ruler"></span>
