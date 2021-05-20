@@ -47,7 +47,7 @@ class MhsController extends Controller{
     public function store(Pendaftarang $request){
         
         $post = $request->input();
-        dd($post);
+        //dd($post);
         unset($post['_token']);
         $post['foto'] = '-';
         $post['ktp'] = '-';

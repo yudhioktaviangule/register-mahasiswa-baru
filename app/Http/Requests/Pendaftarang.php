@@ -25,7 +25,6 @@ class Pendaftarang extends FormRequest
     {
         return [
             "email"           => "required|unique:mahasiswas",
-            "nomor_daftar"    => "required|unique:mahasiswas",
             "agama"           => "required",
             "nama_akademi"    => "required",
             "kelamin"         => "required",
